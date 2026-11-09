@@ -210,11 +210,11 @@ c = pd.read_csv("data/consumption_hourly.csv")
 d = pd.read_csv("data/daily_prices.csv")
 h = c[c.UserGroup == "BE02"]
 
-print(h.Price.mean())                              # average price, about 59.7
-print(d.Spread.mean())                             # average daily gap, about 72.2
-print(d.Gap.sum() * 10 / 1000)                     # saving per home, about 79.07
-print((h.kWhPerPoint * h.Price).sum() / h.kWhPerPoint.sum())   # weighted price, about 78.0
-print((h.Price < 0).sum())                         # negative-price hours, 52
+print(h.Price.mean())                              
+print(d.Spread.mean())                             
+print(d.Gap.sum() * 10 / 1000)                     
+print((h.kWhPerPoint * h.Price).sum() / h.kWhPerPoint.sum())   
+print((h.Price < 0).sum())                       
 ```
 
 ---
