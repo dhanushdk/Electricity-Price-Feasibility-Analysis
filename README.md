@@ -2,8 +2,6 @@
 
 A data analysis of Finnish electricity prices and household electricity use (January to September 2026), built with Excel, Power Query, DAX and Power BI.
 
-Student project, Data Analytics and Business Intelligence (DABI), University of Oulu.
-
 **Power BI report:** [Open the interactive report](https://app.powerbi.com/groups/me/reports/076059f7-6e7e-4fde-a796-c80e829942ba/11de4ab212c298c4d29c?experience=power-bi)
 
 ---
