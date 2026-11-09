@@ -1,9 +1,10 @@
-# Is There an Opportunity for a Smart Electricity App in Finland?
+# Electricity Price Feasibility Analysis – Household Consumption
 
-A data analysis of Finnish electricity prices and household electricity use (January to September 2026), built with Excel, Power Query and Power BI.
+A data analysis of Finnish electricity prices and household electricity use (January to September 2026), built with Excel, Power Query, DAX and Power BI.
 
 Student project, Data Analytics and Business Intelligence (DABI), University of Oulu.
-Author: Dhanush Kumar Janakiraman Ramakrishnan
+
+**Power BI report:** [Open the interactive report](https://app.powerbi.com/groups/me/reports/076059f7-6e7e-4fde-a796-c80e829942ba/11de4ab212c298c4d29c?experience=power-bi)
 
 ---
 
@@ -26,9 +27,9 @@ This project does **not** build the app. It uses data to answer one question:
 | Electricity consumption by user group in Finnish distribution networks (dataset 360) | Fingrid Oy / Datahub Oy, [Fingrid Open Data](https://data.fingrid.fi/en/datasets/360) | Hourly electricity use by 14 user groups and the number of metering points (91,714 rows) |
 | Energy Prices [12.1.D], day-ahead, bidding zone BZN\|FI | [ENTSO-E Transparency Platform](https://transparency.entsoe.eu/) | Finnish day-ahead electricity price in EUR/MWh, one price every 15 minutes (28,988 prices) |
 
-Appliance energy figures (used for the appliance results): Helen Oy (2017) *Sähkölaitteiden kulutuslukuja*; Helen Oy (2020) *Pyykin kuivaus*; Nordic Sun (2024) off-grid power station brochure. The EV figure (10 kWh a day) is my own assumption.
+Appliance energy figures (used for the appliance results): Helen Oy (2017) *Sähkölaitteiden kulutuslukuja*; Helen Oy (2020) *Pyykin kuivaus*; Nordic Sun (2024) off-grid power station brochure. The EV figure (10 kWh a day) is an assumption.
 
-The raw downloads are not stored here. Fingrid asks users to credit the source (CC BY 4.0), and ENTSO-E has its own terms of use. The files in `data/` are my cleaned and joined tables.
+The raw downloads are not stored here. Fingrid asks users to credit the source (CC BY 4.0), and ENTSO-E has its own terms of use. The files in `data/` are the cleaned and joined tables.
 
 ---
 
@@ -40,6 +41,8 @@ The raw downloads are not stored here. Fingrid asks users to credit the source (
 | `data/daily_prices.csv` | Daily price statistics (273 days) |
 | `dashboard/DABI_Energy_Model2.pbix` | Power BI report with 3 pages (open with Power BI Desktop) |
 | `images/` | Output charts shown in this README |
+
+The same report is also available online through the [Power BI link](https://app.powerbi.com/groups/me/reports/076059f7-6e7e-4fde-a796-c80e829942ba/11de4ab212c298c4d29c?experience=power-bi) at the top of this page.
 
 ### Data dictionary
 
@@ -159,11 +162,15 @@ Small appliances save very little. The value is in EV charging and electric heat
 
 ## 6. Power BI report
 
+Online version: [Power BI report](https://app.powerbi.com/groups/me/reports/076059f7-6e7e-4fde-a796-c80e829942ba/11de4ab212c298c4d29c?experience=power-bi)
+
 | Page | Question | Visuals |
 |---|---|---|
 | 1 | When is electricity cheap? | Line chart of price by hour, combined chart of heated-home use and price, colour matrix of price by month and hour |
 | 2 | How much do prices change? | Column charts by month and by weekday vs weekend, cards for the daily gap and negative-price hours |
 | 3 | Could households save money? | Column chart of saving per home by month, cards for the saving, saving share, price paid and average price |
+
+The report has interactive filters for hour, month and weekday/weekend, so price and consumption patterns can be explored from different angles.
 
 Main DAX measures:
 
